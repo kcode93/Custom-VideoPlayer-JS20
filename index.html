@@ -32,8 +32,31 @@
 		<title>Custom Video Player</title>
 	</head>
 	<body>
-		<h1>Hello World!</h1>
-
+		<h1>Custom Video Player</h1>
+		<video
+			src="resources/videos/gone.mp4"
+			id="video"
+			class="screen"
+			poster="resources/img/poster.png"
+		></video>
+		<div class="controls">
+			<button class="btn" id="play">
+				<i class="fa fa-play fa-2x"></i>
+			</button>
+			<button class="btn" id="stop">
+				<i class="fa fa-stop fa-2x"></i>
+			</button>
+			<input
+				type="range"
+				min="0"
+				max="100"
+				step="0.1"
+				value="0"
+				class="progress"
+				id="progress"
+			/>
+			<span id="timestamp" class="timestamp fw-bold">0:00</span>
+		</div>
 		<!-- Bootstrap JS & Popper JS -->
 		<script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
