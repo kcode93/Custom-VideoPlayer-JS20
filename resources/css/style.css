@@ -1,0 +1,50 @@
+:root {
+	--background-color: hsl(245, 9%, 24%);
+	--screen-background-color: #000;
+	--body-color: #fff;
+	--body-max-height: 100vh;
+	--screen-border-size: 10px;
+}
+
+body {
+	background-color: var(--background-color);
+	/* color: var(--body-color); */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1.5rem;
+	margin: 0;
+}
+
+h1 {
+	color: var(--body-color);
+}
+
+.screen {
+	--screen-width: 50%;
+	cursor: pointer;
+	width: var(--screen-width);
+	background-color: var(--screen-background-color);
+	border-top-left-radius: var(--screen-border-size);
+	border-top-right-radius: var(--screen-border-size);
+}
+
+.controls {
+	--controls-background: darkgray;
+	--controls-color: blue;
+	background-color: var(--controls-background);
+	width: 50%;
+	display: flex;
+	align-items: center;
+	padding: 0.5rem;
+	gap: 0.8rem;
+	/* border-top: 0.25rem solid var(--background-color); */
+}
+
+@media screen (max-width: 800px) {
+	.screen,
+	.controls {
+		width: 90%;
+	}
+}
