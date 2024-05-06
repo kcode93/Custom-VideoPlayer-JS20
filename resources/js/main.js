@@ -2,7 +2,7 @@
 const video = document.querySelector('#video');
 const playbtn = document.querySelector('#play');
 const stopbtn = document.querySelector('#stop');
-const progressBar = document.querySelector('#progress');
+let progressBar = document.querySelector('#progress');
 const timeStamp = document.querySelector('#timestamp');
 
 //Play & Pause Video
@@ -28,7 +28,7 @@ function updatePlayIcon(){
 
 //update progress & timestamp
 function updateProgressBar(){
-    return true;
+   progressBar.value = (video.currentTime / video.duration) * 100;
 }
 
 //stops the video
@@ -37,18 +37,9 @@ function stopVideo(){
     video.pause();
 }
 
-//plays Video
-// function playVideo(){
-//     if(video.paused || video.stopped){
-//         video.play();
-//         updatePlayIcon();
-//         toggleVideoStatus();
-//     }
-// }
-
 //sets Video TimeStamp
 function setVideoProgress(){
-    return true;
+    video.currentTime = (progressBar.value * video.duration) / 100;
 }
 
 
