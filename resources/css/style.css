@@ -4,6 +4,10 @@
 	--body-color: #fff;
 	--body-max-height: 100vh;
 	--screen-border-size: 10px;
+	--play-color: hsl(134, 70%, 30%);
+	--play-color-hover: hsl(134, 70%, 40%);
+	--stop-color: hsl(354, 72%, 38%);
+	--stop-color-hover: hsl(354, 72%, 48%);
 }
 
 body {
@@ -40,6 +44,29 @@ h1 {
 	padding: 0.5rem;
 	gap: 0.8rem;
 	/* border-top: 0.25rem solid var(--background-color); */
+}
+
+.controls .fa-play,
+.controls .fa-stop {
+	transition: all 0.5s ease-in-out;
+}
+
+.controls .fa-play {
+	color: var(--play-color);
+}
+
+.controls .fa-play:hover,
+.controls .fa-play:focus {
+	color: var(--play-color-hover);
+}
+
+.controls .fa-stop {
+	color: var(--stop-color);
+}
+
+.controls .fa-stop:hover,
+.controls .fa-stop:focus {
+	color: var(--stop-color-hover);
 }
 
 @media screen (max-width: 800px) {
